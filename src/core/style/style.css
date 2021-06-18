@@ -1,0 +1,148 @@
+html, body, #root {
+    height: 100% !important;
+}
+
+#dashboard {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+}
+@font-face {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/agency/agency-fb_0b9596562659a0772f5e24c22cae921b.ttf');
+}
+
+.select__single-value {
+    color: inherit !important;
+}
+* {
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+    font-family: Agency FB !important;
+}
+a {
+    outline: none;
+    text-decoration: none;
+    color:inherit;
+}
+
+ul, li {
+    font-family: Agency FB;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+img {
+    height: 100%;
+}
+
+iframe {
+    height: 100% !important;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinInner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-720deg);
+        transform: rotate(-720deg);
+    }
+}
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #4891FF !important;
+}
+.MuiOutlinedInput-notchedOutline {
+    border-color: rgb(204, 204, 204);
+}
+.MuiOutlinedInput-notchedOutline:hover {
+    border-color: #b3b3b3;
+}
+.css-uyb44-placeholder {
+    color: #c2c6c4 !important;
+}
+.css-1fjntk0-control {
+    padding: 0 5px !important;
+    min-height: 32px !important;
+    height: 32px !important;
+    align-items: flex-start !important;
+}
+.Accordion:hover > .AccordionSummary .MuiAccordionSummary-content .displayable{
+    opacity: 1;
+}
+.displayable {
+    opacity: 0;
+    display: flex;
+}
+.Accordion:hover > .AccordionSummary .displayable{
+    opacity: 1;
+}
+.displayableContent:hover .displayable {
+    opacity: 1;
+}
+.MuiInputBase-input {
+    height: 1.4875em !important;
+    font-size: 0.8rem !important;
+}
+.MuiPickersStaticWrapper-staticWrapperRoot {
+    width: 310px;
+}
+.MuiPickersDay-daySelected {
+    border-radius: 4px !important;
+}
+.MuiPickersDatePickerRoot-toolbar {
+    display: none !important;
+}
+.MuiInput-formControl {
+    margin-top: 0 !important;
+}
+.css-ifzlal::-webkit-scrollbar {
+    width: 0;
+}
+.css-ifzlal {
+    top: 8px;
+}
+@-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
