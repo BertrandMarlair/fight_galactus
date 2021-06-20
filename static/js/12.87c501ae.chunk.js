@@ -1,0 +1,1 @@
+(this.webpackJsonpnewclient=this.webpackJsonpnewclient||[]).push([[12],{269:function(n,e,t){"use strict";t.r(e);var c=t(0),i=t(2);e.default=function(n){return Object(i.jsx)(c.Fragment,{children:n.children})}}}]);
