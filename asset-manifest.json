@@ -2,12 +2,12 @@
   "files": {
     "main.css": "/fight_galactus/static/css/main.bcefd275.chunk.css",
     "main.js": "/fight_galactus/static/js/main.664590e1.chunk.js",
-    "runtime-main.js": "/fight_galactus/static/js/runtime-main.54143fc9.js",
+    "runtime-main.js": "/fight_galactus/static/js/runtime-main.faa7f3e6.js",
     "static/js/2.4d4e73e0.chunk.js": "/fight_galactus/static/js/2.4d4e73e0.chunk.js",
     "static/js/3.2fbfbfdd.chunk.js": "/fight_galactus/static/js/3.2fbfbfdd.chunk.js",
     "static/js/4.5d5c6f43.chunk.js": "/fight_galactus/static/js/4.5d5c6f43.chunk.js",
     "static/js/5.f0094de8.chunk.js": "/fight_galactus/static/js/5.f0094de8.chunk.js",
-    "static/js/6.621dbe40.chunk.js": "/fight_galactus/static/js/6.621dbe40.chunk.js",
+    "static/js/6.99979578.chunk.js": "/fight_galactus/static/js/6.99979578.chunk.js",
     "static/js/7.3cb88bdc.chunk.js": "/fight_galactus/static/js/7.3cb88bdc.chunk.js",
     "static/js/8.17a01fb7.chunk.js": "/fight_galactus/static/js/8.17a01fb7.chunk.js",
     "static/js/9.4efc76b4.chunk.js": "/fight_galactus/static/js/9.4efc76b4.chunk.js",
@@ -22,7 +22,7 @@
     "static/media/done.c2aca6b7.png": "/fight_galactus/static/media/done.c2aca6b7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.54143fc9.js",
+    "static/js/runtime-main.faa7f3e6.js",
     "static/js/2.4d4e73e0.chunk.js",
     "static/css/main.bcefd275.chunk.css",
     "static/js/main.664590e1.chunk.js"
