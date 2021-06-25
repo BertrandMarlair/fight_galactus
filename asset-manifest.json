@@ -3,12 +3,12 @@
     "static/js/0.3d17d980.chunk.js": "/fight_galactus/static/js/0.3d17d980.chunk.js",
     "main.css": "/fight_galactus/static/css/main.bcefd275.chunk.css",
     "main.js": "/fight_galactus/static/js/main.82751572.chunk.js",
-    "runtime-main.js": "/fight_galactus/static/js/runtime-main.257c172b.js",
+    "runtime-main.js": "/fight_galactus/static/js/runtime-main.a3abb2d4.js",
     "static/js/3.67611576.chunk.js": "/fight_galactus/static/js/3.67611576.chunk.js",
     "static/js/4.4a146d91.chunk.js": "/fight_galactus/static/js/4.4a146d91.chunk.js",
-    "static/js/5.6f6c5c2a.chunk.js": "/fight_galactus/static/js/5.6f6c5c2a.chunk.js",
+    "static/js/5.3f56250d.chunk.js": "/fight_galactus/static/js/5.3f56250d.chunk.js",
     "static/js/6.c6859c03.chunk.js": "/fight_galactus/static/js/6.c6859c03.chunk.js",
-    "static/js/7.4f34fc28.chunk.js": "/fight_galactus/static/js/7.4f34fc28.chunk.js",
+    "static/js/7.6adae1f3.chunk.js": "/fight_galactus/static/js/7.6adae1f3.chunk.js",
     "static/js/8.018d6c33.chunk.js": "/fight_galactus/static/js/8.018d6c33.chunk.js",
     "static/js/9.6ba8d6d8.chunk.js": "/fight_galactus/static/js/9.6ba8d6d8.chunk.js",
     "static/js/10.3c1b4d2d.chunk.js": "/fight_galactus/static/js/10.3c1b4d2d.chunk.js",
@@ -23,7 +23,7 @@
     "static/media/done.c2aca6b7.png": "/fight_galactus/static/media/done.c2aca6b7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.257c172b.js",
+    "static/js/runtime-main.a3abb2d4.js",
     "static/js/3.67611576.chunk.js",
     "static/css/main.bcefd275.chunk.css",
     "static/js/main.82751572.chunk.js"
