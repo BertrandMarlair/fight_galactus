@@ -1,1 +1,0 @@
-(this.webpackJsonpnewclient=this.webpackJsonpnewclient||[]).push([[16],{311:function(t,n,e){"use strict";e.r(n);var c=e(0),i=e(25),s=e(2);n.default=function(t){var n=t.history;return Object(c.useEffect)((function(){Object(i.a)("authentification"),n.push("/connect/login")}),[]),Object(s.jsx)("div",{})}}}]);
