@@ -5,7 +5,7 @@ const style = (theme) => ({
     },
     button: {
         backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
+        color: "black",
         minWidth: 110,
         letterSpacing: 0.75,
         textTransform: "inherit",
@@ -13,7 +13,7 @@ const style = (theme) => ({
         position: "relative",
         padding: "7px 23px",
         margin: "8px 10px !important",
-        fontSize: "12px",
+        fontSize: "22px",
         fontWeight: "200",
         textAlign: "center",
         lineHeight: "1.42857143",

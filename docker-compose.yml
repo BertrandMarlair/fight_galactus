@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  client:
+    container_name: client
+    image: bertrandmarlair/fightgalactus:1.0.0
+    build:
+      context: ./
+      dockerfile: ./image/Dockerfile
+    volumes: 
+      - ./public/env.js:/app/build/env.js
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+    networks:
+      - webnet
+      - default
+networks:
+  webnet:
+    driver: bridge
+  default:
+    external:
+      name: services-network

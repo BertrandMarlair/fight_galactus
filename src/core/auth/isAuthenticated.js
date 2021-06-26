@@ -4,8 +4,6 @@ import {deleteLocalstorage, getLocalstorage} from "../localstorage/localStorage"
 const isAuthenticated = () => {
     const token = getLocalstorage("authentification");
 
-    return true;
-
     if (token) {
         try {
             return true;

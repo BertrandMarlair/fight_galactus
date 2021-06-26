@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable handle-callback-err */
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
@@ -5,21 +6,24 @@ import React, {useState} from "react";
 import style from "./ScannerStyle";
 import {withStyles} from "@material-ui/styles";
 import Title from "../../../components/typography/Title";
+import SmallTitle from "../../../components/typography/SmallTitle";
 import Error from "../../../components/error/Error";
-import QrReader from "react-qr-reader";
 import Text from "../../../components/typography/Text";
-import BarcodeScannerComponent from "react-qr-barcode-scanner";
+import Button from "../../../components/button/Button";
 import QrScanner from "react-qr-scanner";
-import {useEffect} from "react";
+import Modal from "../../../components/modal/SimpleModal";
+import Card from "../../../components/card/Card";
+import Done from "../../../assets/images/done.png";
+import {NavLink} from "react-router-dom";
+import {getLocalstorage} from "../../../core/localstorage/localStorage";
+import axios from "axios";
 
 const Scanner = ({classes}) => {
+    const api = window.api;
+    const uid = getLocalstorage("authentification");
+
     const [error, setErrror] = useState(null);
     const [result, setResult] = useState(null);
-
-    const previewStyle = {
-        height: 240,
-        width: 320,
-    };
 
     const handleError = (err) => {
         console.error(err);
@@ -27,46 +31,74 @@ const Scanner = ({classes}) => {
     };
 
     const handleScan = (data) => {
-        console.log(data);
-        setResult(data);
-    };
-
-    useEffect(() => {
-        let video = document.querySelector("#videoElement");
-
-        if (navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices
-                .getUserMedia({video: true})
-                .then((stream) => {
-                    video.srcObject = stream;
+        if (data) {
+            console.log(data);
+            axios({
+                method: "GET",
+                url: `${api}/Scan.php`,
+                headers: {
+                    IdEquipe: uid,
+                    IdPoste: data?.text,
+                },
+            })
+                .then((res) => {
+                    console.log("res", res);
+                    axios({
+                        method: "GET",
+                        url: `${api}/GetAllPostes.php`,
+                    })
+                        .then((allPost) => {
+                            console.log("end", allPost);
+                            setResult(allPost?.data?.find((p) => p.URL === data?.text));
+                        })
+                        .catch((err) => {
+                            console.log("err", err);
+                        });
                 })
-                .catch((err0r) => {
-                    console.log("Something went wrong!");
+                .catch((err) => {
+                    console.log("err", err);
                 });
         }
-    }, []);
+    };
+
+    const previewStyle = {
+        height: 300,
+        width: 300,
+        border: "2px solid white",
+    };
 
     return (
         <div className={classes.root}>
             <div className={classes.titleWrapper}>
                 <Title className={classes.title}>SCANNER</Title>
             </div>
-            {/* <QrReader delay={1000} /> */}
-            <QrScanner delay={1000} />
-            <BarcodeScannerComponent
-                width={500}
-                height={500}
-                onUpdate={(err, result) => {
-                    if (result) {
-                        setResult(result.text);
-                    } else {
-                        setResult("Not Found");
-                    }
-                }}
-            />
+            <div className={classes.scanner}>
+                {!error && !result && (
+                    <QrScanner
+                        style={previewStyle}
+                        delay={1000}
+                        onScan={handleScan}
+                        onError={handleError}
+                        constraints={{audio: false, video: {facingMode: {exact: "environment"}}}}
+                    />
+                )}
+            </div>
+            <Modal open={Boolean(result)} onClose={() => setResult(null)} fullWidth>
+                <Card className={classes.modalWrapper}>
+                    <Title>Scan Effectué</Title>
+                    <img className={classes.img} src={Done} alt="done" />
+                    <SmallTitle>Vos point on été comptabilisé ! {result?.NOM} à été capturer</SmallTitle>
+                    <SmallTitle>
+                        Vous gagnez <span className={classes.points}>{result?.NBR_POINT}</span> points par secondes en
+                        plus
+                    </SmallTitle>
+                    <SmallTitle>Foncez en récuperer d'autres !</SmallTitle>
+                    <NavLink to="/app/dashboard">
+                        <Button>Voir Nos Points</Button>
+                    </NavLink>
+                </Card>
+            </Modal>
             <Error errorMessage={error} />
-            <video autoPlay="true" id="videoElement"></video>
-            <Text>{result}</Text>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import {lazy} from "react";
 const Dashboard = lazy(() => import("../dashboard/Dashboard"));
 const Scanner = lazy(() => import("../scanner/Scanner"));
 const Details = lazy(() => import("../details/Details"));
+const Logout = lazy(() => import("../logout/Logout"));
 
 export const defaultRoute = "/app/dashboard";
 export const name = "App";
@@ -25,6 +26,12 @@ const dashboardRoutes = [
         path: "/app/details",
         name: "Details",
         component: Details,
+        exact: true,
+    },
+    {
+        path: "/app/logout",
+        name: "Logout",
+        component: Logout,
         exact: true,
     },
 ];

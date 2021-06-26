@@ -100,12 +100,12 @@ export const strongWhiteBorder = "5px solid #eee";
 export const remXXXs = "0,6875rem";
 export const remXXS = "0.65rem";
 export const remXs = "0.75rem";
-export const remS = "0.85rem";
-export const remM = "0.9rem";
-export const remMl = "1.05rem";
-export const remL = "1.15rem";
-export const remXl = "1.35rem";
-export const remXXl = "1.60rem";
+export const remS = "1.85rem";
+export const remM = "1.9rem";
+export const remMl = "1.55rem";
+export const remL = "1.95rem";
+export const remXl = "2.35rem";
+export const remXXl = "2.60rem";
 export const remXXXl = "2.75rem";
 
 // font size

@@ -5,15 +5,15 @@ import {BottomNavigation, BottomNavigationAction} from "@material-ui/core";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PhotoCameraIcon from "@material-ui/icons/PhotoCamera";
 import ArtTrackIcon from "@material-ui/icons/ArtTrack";
-import {useHistory} from "react-router-dom";
+import {useHistory, useLocation} from "react-router-dom";
 
 const BottomNav = ({classes}) => {
     const history = useHistory();
+    const location = useLocation();
     const [value, setValue] = useState(0);
 
     useEffect(() => {
-        console.log("hisotry", history);
-        switch (history.location.pathname) {
+        switch (location.pathname) {
             case "/app/dashboard":
                 if (value !== 0) {
                     setValue(0);
@@ -30,7 +30,7 @@ const BottomNav = ({classes}) => {
                 }
                 break;
         }
-    }, [history]);
+    }, [location]);
 
     const handleChange = (e, newValue) => {
         setValue(newValue);
