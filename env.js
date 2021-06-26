@@ -4,5 +4,5 @@ const env = {
     protocolHTTP: "http",
     protocolWS: "ws",
     started: true,
-    api: "http://ec2-54-154-190-29.eu-west-1.compute.amazonaws.com",
+    api: "https://api.fightgalactus.tk",
 };
